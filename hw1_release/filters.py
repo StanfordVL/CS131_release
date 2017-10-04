@@ -25,16 +25,22 @@ def conv_nested(image, kernel):
 
     return out
 
-def zero_pad(image, pad_width, pad_height):
+def zero_pad(image, pad_height, pad_width):
     """ Zero-pad an image.
+
+    Ex: a 1x1 image [[1]] with pad_height = 1, pad_width = 2 becomes:
+
+        [[0, 0, 0, 0, 0],
+         [0, 0, 1, 0, 0],
+         [0, 0, 0, 0, 0]]         of shape (3, 5)
 
     Args:
         image: numpy array of shape (H, W)
-        pad_width: width of the zero padding
-        pad_height: height of the zero padding
+        pad_width: width of the zero padding (left and right padding)
+        pad_height: height of the zero padding (bottom and top padding)
 
     Returns:
-        out: numpy array of shape (H+2*pad_width, W+2*pad_height)
+        out: numpy array of shape (H+2*pad_height, W+2*pad_width)
     """
 
     H, W = image.shape
