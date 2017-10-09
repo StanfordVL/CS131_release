@@ -29,6 +29,9 @@ def gaussian_kernel(size, sigma):
     
     This function follows the gaussian kernel formula,
     and creates a kernel matrix.
+
+    Hints:
+    - Use np.pi and np.exp to compute pi and exp
     
     Args:
         size: int of the size of output matrix
@@ -247,7 +250,7 @@ def hough_transform(img):
     # Set rho and theta ranges
     W, H = img.shape
     diag_len = int(np.ceil(np.sqrt(W * W + H * H)))
-    rhos = np.linspace(-diag_len, diag_len, diag_len * 2.0)
+    rhos = np.linspace(-diag_len, diag_len, diag_len * 2.0 + 1)
     thetas = np.deg2rad(np.arange(-90.0, 90.0))
 
     # Cache some reusable values
@@ -256,7 +259,7 @@ def hough_transform(img):
     num_thetas = len(thetas)
 
     # Initialize accumulator in the Hough space
-    accumulator = np.zeros((2 * diag_len, num_thetas), dtype=np.uint64)
+    accumulator = np.zeros((2 * diag_len + 1, num_thetas), dtype=np.uint64)
     ys, xs = np.nonzero(img)
 
     # Transform each point (x, y) in image
