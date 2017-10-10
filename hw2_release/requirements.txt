@@ -19,6 +19,7 @@ matplotlib==2.0.2
 mistune==0.7.4
 nbconvert==5.2.1
 nbformat==4.3.0
+networkx==1.11
 notebook==5.0.0
 numpy==1.13.1
 olefile==0.44
@@ -32,8 +33,11 @@ Pygments==2.2.0
 pyparsing==2.2.0
 python-dateutil==2.6.1
 pytz==2017.2
+PyWavelets==0.5.2
 pyzmq==16.0.2
 qtconsole==4.3.0
+scikit-image==0.13.0
+scipy==0.19.1
 simplegeneric==0.8.1
 six==1.10.0
 terminado==0.6
