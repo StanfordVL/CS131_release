@@ -181,7 +181,7 @@ def get_neighbors(y, x, H, W):
     neighbors = []
 
     for i in (y-1, y, y+1):
-        for j in (x-1, x, y+1):
+        for j in (x-1, x, x+1):
             if i >= 0 and i < H and j >= 0 and j < W:
                 if (i == y and j == x):
                     continue
