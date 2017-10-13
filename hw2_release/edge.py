@@ -201,17 +201,18 @@ def link_edges(strong_edges, weak_edges):
         strong_edges: binary image of shape (H, W)
         weak_edges: binary image of shape (H, W)
     Returns:
-        strong_edges: numpy array of shape(H, W)
+        edges: numpy array of shape(H, W)
     """
 
     H, W = strong_edges.shape
     indices = np.stack(np.nonzero(strong_edges)).T
+    edges = np.zeros((H, W))
 
     ### YOUR CODE HERE
     pass
     ### END YOUR CODE
 
-    return strong_edges
+    return edges
 
 def canny(img, kernel_size=5, sigma=1.4, high=20, low=15):
     """ Implement canny edge detector by calling functions above.
