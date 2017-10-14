@@ -18,6 +18,14 @@ def conv(image, kernel):
     Hk, Wk = kernel.shape
     out = np.zeros((Hi, Wi))
 
+    # For this assignment, we will use edge values to pad the images.
+    # Zero padding will make derivatives at the image boundary very big,
+    # whereas we want to ignore the edges at the boundary.
+    pad_width0 = Hk // 2
+    pad_width1 = Wk // 2
+    pad_width = ((pad_width0,pad_width0),(pad_width1,pad_width1))
+    padded = np.pad(image, pad_width, mode='edge')
+
     ### YOUR CODE HERE
     pass
     ### END YOUR CODE
