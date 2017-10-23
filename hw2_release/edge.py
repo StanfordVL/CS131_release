@@ -18,6 +18,14 @@ def conv(image, kernel):
     Hk, Wk = kernel.shape
     out = np.zeros((Hi, Wi))
 
+    # For this assignment, we will use edge values to pad the images.
+    # Zero padding will make derivatives at the image boundary very big,
+    # whereas we want to ignore the edges at the boundary.
+    pad_width0 = Hk // 2
+    pad_width1 = Wk // 2
+    pad_width = ((pad_width0,pad_width0),(pad_width1,pad_width1))
+    padded = np.pad(image, pad_width, mode='edge')
+
     ### YOUR CODE HERE
     pass
     ### END YOUR CODE
@@ -181,9 +189,9 @@ def get_neighbors(y, x, H, W):
     neighbors = []
 
     for i in (y-1, y, y+1):
-        for j in (x-1, x, y+1):
+        for j in (x-1, x, x+1):
             if i >= 0 and i < H and j >= 0 and j < W:
-                if (i == x and j == y):
+                if (i == y and j == x):
                     continue
                 neighbors.append((i, j))
 
@@ -201,17 +209,18 @@ def link_edges(strong_edges, weak_edges):
         strong_edges: binary image of shape (H, W)
         weak_edges: binary image of shape (H, W)
     Returns:
-        strong_edges: numpy array of shape(H, W)
+        edges: numpy array of shape(H, W)
     """
 
     H, W = strong_edges.shape
     indices = np.stack(np.nonzero(strong_edges)).T
+    edges = np.zeros((H, W))
 
     ### YOUR CODE HERE
     pass
     ### END YOUR CODE
 
-    return strong_edges
+    return edges
 
 def canny(img, kernel_size=5, sigma=1.4, high=20, low=15):
     """ Implement canny edge detector by calling functions above.
