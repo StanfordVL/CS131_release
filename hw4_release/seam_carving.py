@@ -118,7 +118,7 @@ def remove_seam(image, seam):
         seam: numpy array of shape (H,) containing indices of the seam to remove
 
     Returns:
-        out: numpy array of shape (H, W-1, C) or shape (H, W)
+        out: numpy array of shape (H, W-1, C) or shape (H, W-1)
     """
 
     # Add extra dimension if 2D input
