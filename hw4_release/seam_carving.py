@@ -103,7 +103,7 @@ def backtrack_seam(paths, end):
     ### END YOUR CODE
 
     # Check that seam only contains values in [0, W-1]
-    assert np.all(np.any([seam >= 0, seam < W], axis=0)), "seam contains values out of bounds"
+    assert np.all(np.all([seam >= 0, seam < W], axis=0)), "seam contains values out of bounds"
 
     return seam
 
