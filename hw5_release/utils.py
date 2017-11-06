@@ -94,6 +94,7 @@ def load_dataset(data_dir):
             # Load corresponding gt segmentation mask
             mask_fname = fname[:-4] + '.png'
             gt_mask = io.imread(os.path.join(data_dir, 'gt', mask_fname))
+            gt_mask = (gt_mask != 0).astype(int) # Convert to binary mask (0s and 1s)
             gt_masks.append(gt_mask)
 
     return imgs, gt_masks
