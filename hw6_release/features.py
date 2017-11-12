@@ -187,9 +187,14 @@ class LDA(object):
         pass
         # END YOUR CODE
 
-        assert e_vecs.shape == (D, D)
-
         self.W_lda = e_vecs
+
+        # Check that the shape of `self.W_lda` is correct
+        assert self.W_lda.shape == (D, D)
+
+        # Each column of `self.W_lda` should have norm 1 (each one is an eigenvector)
+        for i in range(D):
+            assert np.allclose(np.linalg.norm(self.W_lda[:, i]), 1.0)
 
     def _within_class_scatter(self, X, y):
         """Compute the covariance matrix of each class, and sum over the classes.
