@@ -5,8 +5,6 @@ def compute_distances(X1, X2):
     """Compute the L2 distance between each point in X1 and each point in X2.
     It's possible to vectorize the computation entirely (i.e. not use any loop).
 
-    X1 and X2 have normalized features, i.e. each row has L2 norm 1.
-
     Args:
         X1: numpy array of shape (M, D) normalized along axis=1
         X2: numpy array of shape (N, D) normalized along axis=1
@@ -28,7 +26,6 @@ def compute_distances(X1, X2):
     # in particular you should not use functions from scipy.
     #
     # HINT: Try to formulate the l2 distance using matrix multiplication
-    #       Don't forget that features are normalized by l2_normalize
 
     pass
     # END YOUR CODE
