@@ -1,5 +1,6 @@
 import numpy as np
 import scipy
+import scipy.linalg
 
 
 class PCA(object):
