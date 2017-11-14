@@ -1,5 +1,5 @@
 import numpy as np
-from implementation import *
+from detection import *
 from skimage.transform import rescale, resize, downscale_local_mean
 
 # def read_face_labels(image_paths):
