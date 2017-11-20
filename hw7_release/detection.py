@@ -84,7 +84,7 @@ def pyramid(image, scale=2, minSize=(200, 100)):
     ### END YOUR CODE
     return images
 
-def pyramid_score(image,base_score, shape, stepSize=20, scale = 2, pixel_per_cell = 8):
+def pyramid_score(image,base_score, shape, stepSize=20, scale = 0.9, pixel_per_cell = 8):
     '''
     Calculate the maximum score found in the image pyramid using sliding window.
     
