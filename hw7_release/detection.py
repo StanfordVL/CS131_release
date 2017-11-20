@@ -115,16 +115,16 @@ def pyramid_score(image,base_score, shape, stepSize=20, scale = 0.9, pixel_per_c
 def compute_displacement(part_centers, face_shape):
     ''' Calculate the mu and sigma for each part. d is the array 
         where each row is the main center (face center) minus the 
-        part center. Vector mu is computed by taking an average from
+        part center. Since in our dataset, the face is the full
+        image, face center could be computed by finding the center
+        of the image. Vector mu is computed by taking an average from
         the rows of d. And sigma is the standard deviation among 
         among the rows.
     
     Args:
         part_centers: np array of shape (n,2) containing centers 
             of one part in each image
-        bboxes: np array of shape (n,4) containing bounding boxes 
-            of the main part in each image, one row represents
-            row, column, height and width
+        face_shape: (h,w) that indicates the shape of a face
     Returns:
         mu: (1,2) vector
         sigma: (1,2) vector
