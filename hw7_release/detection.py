@@ -58,7 +58,7 @@ def sliding_window(image, base_score, stepSize, windowSize, pixel_per_cell=8):
     return (max_score, maxr, maxc, response_map)
 
 
-def pyramid(image, scale=2, minSize=(200, 100)):
+def pyramid(image, scale=0.9, minSize=(200, 100)):
     '''
     Generate image pyramid using the given image and scale.
     Reducing the size of the image until on of the height or
