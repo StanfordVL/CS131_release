@@ -120,7 +120,8 @@ def compute_displacement(part_centers, face_shape):
         image, face center could be computed by finding the center
         of the image. Vector mu is computed by taking an average from
         the rows of d. And sigma is the standard deviation among 
-        among the rows.
+        among the rows. Note that the heatmap pixels will be shifted 
+        by an int, so mu is an int vector.
     
     Args:
         part_centers: np array of shape (n,2) containing centers 
