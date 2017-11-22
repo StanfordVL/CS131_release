@@ -49,7 +49,7 @@ def sliding_window(image, base_score, stepSize, windowSize, pixel_per_cell=8):
     winH, winW = windowSize
     H,W = image.shape
     pad_image = np.lib.pad(image, ((winH//2,winH//2),(winW//2, winW//2)), mode='constant')
-    response_map = np.zeros((math.ceil(H/float(stepSize)), math.ceil(W/float(stepSize))))
+    response_map = np.zeros((H//stepSize+1, W//stepSize+1))
     
     ### YOUR CODE HERE
     pass
