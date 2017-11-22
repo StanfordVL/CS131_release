@@ -1,6 +1,7 @@
 import numpy as np
 from detection import *
 from skimage.transform import rescale, resize, downscale_local_mean
+from skimage.filters import gaussian
 
 # def read_face_labels(image_paths):
 #     label_path = "list_bbox_celeba.txt"
@@ -92,7 +93,7 @@ def get_heatmap(image, face_feature, face_shape, detectors_list, parts):
         mu, std = compute_displacement(part, face_shape)
         response_map = resize(response_map, face_response_map.shape)
         response_map_shifted = shift_heatmap(response_map, mu)
-        heatmap = gaussian_filter(response_map_shifted, std)
+        heatmap = gaussian(response_map_shifted, std)
         face_heatmap_shifted+= heatmap
     return face_heatmap_shifted
 
