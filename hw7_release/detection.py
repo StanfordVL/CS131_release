@@ -4,6 +4,7 @@ from skimage.transform import rescale, resize, downscale_local_mean
 from skimage.filters import gaussian
 from scipy import signal
 from scipy.ndimage import interpolation
+import math
 
 def hog_feature(image, pixel_per_cell = 8):
     ''' 
