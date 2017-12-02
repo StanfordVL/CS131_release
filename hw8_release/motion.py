@@ -166,6 +166,7 @@ def compute_error(patch1, patch2):
 def track_features(frames, keypoints,
                    error_thresh=1.5,
                    optflow_fn=pyramid_lucas_kanade,
+                   exclude_border=5,
                    **kwargs):
 
     """ Track keypoints over multiple frames
@@ -204,8 +205,8 @@ def track_features(frames, keypoints,
             yi = int(round(yi)); xi = int(round(xi))
             yj = int(round(yj)); xj = int(round(xj))
             # Point falls outside the image
-            if yj > J.shape[0] - 2 or yj < 1 or\
-               xj > J.shape[1] - 2 or xj < 1:
+            if yj > J.shape[0]-exclude_border-1 or yj < exclude_border or\
+               xj > J.shape[1]-exclude_border-1 or xj < exclude_border:
                 continue
 
             # Compute error between patches in image I and J
