@@ -11,9 +11,9 @@ jedi==0.10.2
 Jinja2==2.9.6
 jsonschema==2.6.0
 jupyter==1.0.0
-jupyter-client==5.1.0
+jupyter-client==5.2.0
 jupyter-console==5.1.0
-jupyter-core==4.3.0
+jupyter-core==4.4.0
 MarkupSafe==1.0
 matplotlib==2.0.2
 mistune==0.7.4
@@ -27,7 +27,7 @@ pandocfilters==1.4.1
 pexpect==4.2.1
 pickleshare==0.7.4
 Pillow==4.2.1
-prompt-toolkit==1.0.14
+prompt-toolkit==1.0.15
 ptyprocess==0.5.2
 Pygments==2.2.0
 pyparsing==2.2.0
@@ -40,7 +40,7 @@ scikit-image==0.13.0
 scipy==0.19.1
 simplegeneric==0.8.1
 six==1.10.0
-terminado==0.6
+terminado==0.8.1
 testpath==0.3.1
 tornado==4.5.1
 traitlets==4.3.2
