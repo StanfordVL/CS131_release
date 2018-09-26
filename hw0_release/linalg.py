@@ -117,8 +117,9 @@ def get_eigen_values_and_vectors(M, k):
         k: number of eigen values and respective vectors to return.
 
     Returns:
-        eigenvalues: array of shape (n)
-        eigenvectors: array of shape (m, n)
+        eigenvalues: list of length k containing the top k eigenvalues
+        eigenvectors: list of length k containing the top k eigenvectors
+            of shape (m, 1)
     """
     eigenvalues = []
     eigenvectors = []
