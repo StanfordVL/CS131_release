@@ -8,7 +8,7 @@ If you have not yet cloned (copied this assignment) into your local machine, fol
 1. In your terminal, navigate to a directory where you want to save your work in progress.
 2. Clone the assignments repository by running:
 ```
-git clone https://github.com/niebles/cs131.git
+git clone https://github.com/StanfordVL/CS131_release.git
 ```
 3. Navigate into the homework 0 directory:
 ```
