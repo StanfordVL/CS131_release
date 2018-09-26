@@ -22,7 +22,7 @@ def dot_product(a, b):
 
 
 def complicated_matrix_function(M, a, b):
-    """Implement (a.T * b) * (M * a).
+    """Implement (a.T * b) * (M * a.T).
 
     (optional): Use the `dot_product(a, b)` function you wrote above
     as a helper function.
