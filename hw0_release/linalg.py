@@ -33,7 +33,7 @@ def complicated_matrix_function(M, a, b):
         b: numpy array of shape (n, 1).
 
     Returns:
-        out: numpy matrix of shape (1, x).
+        out: numpy matrix of shape (x, 1).
     """
     out = None
     ### YOUR CODE HERE
