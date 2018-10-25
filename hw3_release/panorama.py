@@ -181,9 +181,11 @@ def ransac(keypoints1, keypoints2, matches, n_iters=200, threshold=20):
         keypoints 1
     """
     # Copy matches array, to avoid overwriting it
+    orig_matches = matches.copy()
     matches = matches.copy()
 
     N = matches.shape[0]
+    print(N)
     n_samples = int(N * 0.2)
 
     matched1 = pad(keypoints1[matches[:,0]])
@@ -196,7 +198,8 @@ def ransac(keypoints1, keypoints2, matches, n_iters=200, threshold=20):
     ### YOUR CODE HERE
     pass
     ### END YOUR CODE
-    return H, matches[max_inliers]
+    print(H)
+    return H, orig_matches[max_inliers]
 
 
 def hog_descriptor(patch, pixels_per_cell=(8,8)):
