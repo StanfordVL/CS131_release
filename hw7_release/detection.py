@@ -33,6 +33,8 @@ def sliding_window(image, base_score, stepSize, windowSize, pixel_per_cell=8):
         response map is a corresponding score. And you will need to resize the response map
         so that it has the same shape as the image.
 
+    Hint: use the resize function provided by skimage.
+
     Args:
         image: an np array of size (h,w).
         base_score: hog representation of the object you want to find, an array of size (m,).
@@ -40,8 +42,8 @@ def sliding_window(image, base_score, stepSize, windowSize, pixel_per_cell=8):
         windowSize: a pair of ints that is the height and width of the window.
     Returns:
         max_score: float of the highest hog score.
-        maxr: int of row where the max_score is found.
-        maxc: int of column where the max_score is found.
+        maxr: int of row where the max_score is found (top-left of window).
+        maxc: int of column where the max_score is found (top-left of window).
         response_map: an np array of size (h,w).
     """
     # slide a window across the image
@@ -64,6 +66,8 @@ def pyramid(image, scale=0.9, minSize=(200, 100)):
     Reducing the size of the image until on of the height or
     width reaches the minimum limit. In the ith iteration,
     the image is resized to scale^i of the original image.
+
+    Hint: use the rescale function provided by skimage.
 
     Args:
         image: np array of (h,w), an image to scale.
@@ -141,6 +145,8 @@ def shift_heatmap(heatmap, mu):
     """First normalize the heatmap to make sure that all the values
         are not larger than 1.
         Then shift the heatmap based on the vector mu.
+
+        Hint: use the interpolation.shift function provided by scipy.ndimage.
 
         Args:
             heatmap: np array of (h,w).
