@@ -12,3 +12,5 @@ Homework 5 asks students to learn to segment images by assigning each pixel to a
 Homework 6 and 7 introduce two fundamental tasks in computer vision: image classification and object detection respectively. Students learn to use different image features and classifiers to study how they influence results on such tasks. They are asked to consider the important of rotation, translation, scale and occlusion variance when deciding what features to use. They also study the curse of dimensionality and learn to apply principal component analysis and linear discriminant analysis to further improve their features while compressing their features. Students also explore common methods like sliding windows and deformable parts models to decompose objects into its individual components when detecting them.
 
 Homework 8 ends the course by moving away from still images and into video and studying time dependent features. They learn to use optical flow to calculate motion in images, a technique useful for tracking people in images and classifying actions that people perform.
+
+All the homeworks are under the MIT license.
