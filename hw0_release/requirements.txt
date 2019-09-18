@@ -1,6 +1,6 @@
 bleach==2.0.0
 cycler==0.10.0
-decorator==4.0.11
+decorator==4.3.0
 entrypoints==0.2.3
 html5lib==0.999999999
 ipywidgets==6.0.0
@@ -12,7 +12,7 @@ jupyter-client==5.2.0
 jupyter-console==5.1.0
 jupyter-core==4.4.0
 MarkupSafe==1.0
-matplotlib==2.0.2
+matplotlib==3.1.1
 mistune==0.7.4
 nbconvert==5.2.1
 nbformat==4.3.0
