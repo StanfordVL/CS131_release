@@ -22,7 +22,7 @@ def dot_product(a, b):
 
 
 def complicated_matrix_function(M, a, b):
-    """Implement (a.T * b) * (M * a.T).
+    """Implement (a * b) * (M * a.T).
 
     (optional): Use the `dot_product(a, b)` function you wrote above
     as a helper function.
@@ -89,6 +89,8 @@ def get_singular_values(M, k):
 
 def eigen_decomp(M):
     """Implement eigenvalue decomposition.
+    
+    (optional): You might find the `np.linalg.eig` function useful.
 
     Args:
         matrix: numpy matrix of shape (m, n)
@@ -107,10 +109,11 @@ def eigen_decomp(M):
 
 def get_eigen_values_and_vectors(M, k):
     """Return top k eigenvalues and eigenvectors of matrix M. By top k
-    here we mean the eigenvalues with the top ABSOLUTE values.
+    here we mean the eigenvalues with the top ABSOLUTE values (lookup
+    np.argsort for a hint on how to do so.)
 
     (optional): Use the `eigen_decomp(M)` function you wrote above
-    as a helper function.
+    as a helper function
 
     Args:
         M: numpy matrix of shape (m, m).
@@ -119,7 +122,7 @@ def get_eigen_values_and_vectors(M, k):
     Returns:
         eigenvalues: list of length k containing the top k eigenvalues
         eigenvectors: list of length k containing the top k eigenvectors
-            of shape (m, 1)
+            of shape (m,)
     """
     eigenvalues = []
     eigenvectors = []
