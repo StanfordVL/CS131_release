@@ -21,7 +21,7 @@ notebook==5.4.1
 numpy==1.17.2
 olefile==0.44
 pandocfilters==1.4.1
-pexpect==4.2.1
+pexpect==4.7.0
 pickleshare==0.7.4
 Pillow==6.1.0
 prompt-toolkit==2.0.4
