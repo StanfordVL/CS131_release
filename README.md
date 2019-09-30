@@ -1,5 +1,5 @@
 # CS131: Computer Vision Foundations and Applications
-This repository contains the released assignments for the [fall 2017](http://vision.stanford.edu/teaching/cs131_fall1718/), [fall 2018](http://vision.stanford.edu/teaching/cs131_fall1819), and [fall 2019](http://vision.stanford.edu/teaching/cs131_fall920) iteration of CS131, a course at Stanford taught by [Juan Carlos Niebles](http://www.niebles.net) and [Ranjay Krishna](http://ranjaykrishna.com).
+This repository contains the released assignments for the [fall 2017](http://vision.stanford.edu/teaching/cs131_fall1718/), [fall 2018](http://vision.stanford.edu/teaching/cs131_fall1819), and [fall 2019](http://vision.stanford.edu/teaching/cs131_fall1920) iteration of CS131, a course at Stanford taught by [Juan Carlos Niebles](http://www.niebles.net) and [Ranjay Krishna](http://ranjaykrishna.com).
 
 The assignments cover a wide range of topics in computer vision and should expose students to a broad range of concepts and applications. Homework 0 sets up the course with an introduction on how to use images in python and numpy. It covers basic linear algebra that would be helpful through the course.
 
