@@ -244,7 +244,7 @@ def canny(img, kernel_size=5, sigma=1.4, high=20, low=15):
     """ Implement canny edge detector by calling functions above.
 
     Args:
-        img: binary image of shape (H, W).
+        img: grayscale image of shape (H, W).
         kernel_size: int of size for kernel matrix.
         sigma: float for calculating kernel.
         high: high threshold for strong edges.
