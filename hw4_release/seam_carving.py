@@ -348,7 +348,7 @@ def find_seams(image, k, axis=1, efunc=energy_function, cfunc=compute_cost, bfun
     return seams
 
 
-def enlarge(image, size, axis=1, efunc=energy_function, cfunc=compute_cost, dfunc=duplicate_seam):
+def enlarge(image, size, axis=1, efunc=energy_function, cfunc=compute_cost, dfunc=duplicate_seam, bfunc=backtrack_seam, rfunc=remove_seam):
     """Enlarges the size of the image by duplicating the low energy seams.
 
     We start by getting the k seams to duplicate through function find_seams.
@@ -358,6 +358,8 @@ def enlarge(image, size, axis=1, efunc=energy_function, cfunc=compute_cost, dfun
         - efunc (instead of energy_function)
         - cfunc (instead of compute_cost)
         - dfunc (instead of duplicate_seam)
+        - bfunc (instead of backtrack_seam)
+        - rfunc (instead of remove_seam)
         - find_seams
 
     Args:
@@ -367,6 +369,8 @@ def enlarge(image, size, axis=1, efunc=energy_function, cfunc=compute_cost, dfun
         efunc: energy function to use
         cfunc: cost function to use
         dfunc: duplicate seam function to use
+        bfunc: backtrack seam function to use
+        rfunc: remove seam function to use
 
     Returns:
         out: numpy array of shape (size, W, C) if axis=0, or (H, size, C) if axis=1
