@@ -270,7 +270,7 @@ def enlarge_naive(image, size, axis=1, efunc=energy_function, cfunc=compute_cost
     return out
 
 
-def find_seams(image, k, axis=1, efunc=energy_function, cfunc=compute_cost):
+def find_seams(image, k, axis=1, efunc=energy_function, cfunc=compute_cost, bfunc=backtrack_seam, rfunc=remove_seam):
     """Find the top k seams (with lowest energy) in the image.
 
     We act like if we remove k seams from the image iteratively, but we need to store their
@@ -283,8 +283,8 @@ def find_seams(image, k, axis=1, efunc=energy_function, cfunc=compute_cost):
     SUPER IMPORTANT: IF YOU WANT TO PREVENT CASCADING ERRORS IN THE CODE OF find_seams(), USE FUNCTIONS:
         - efunc (instead of energy_function)
         - cfunc (instead of compute_cost)
-        - backtrack_seam
-        - remove_seam
+        - bfunc (instead of backtrack_seam)
+        - rfunc (instead of remove_seam)
 
     Args:
         image: numpy array of shape (H, W, C)
@@ -292,6 +292,8 @@ def find_seams(image, k, axis=1, efunc=energy_function, cfunc=compute_cost):
         axis: find seams in width (axis=1) or height (axis=0)
         efunc: energy function to use
         cfunc: cost function to use
+        bfunc: backtrack seam function to use
+        rfunc: remove seam function to use
 
     Returns:
         seams: numpy array of shape (H, W)
@@ -326,10 +328,10 @@ def find_seams(image, k, axis=1, efunc=energy_function, cfunc=compute_cost):
         energy = efunc(image)
         cost, paths = cfunc(image, energy)
         end = np.argmin(cost[H - 1])
-        seam = backtrack_seam(paths, end)
+        seam = bfunc(paths, end)
 
         # Remove that seam from the image
-        image = remove_seam(image, seam)
+        image = rfunc(image, seam)
 
         # Store the new seam with value i+1 in the image
         # We can assert here that we are only writing on zeros (not overwriting existing seams)
@@ -338,7 +340,7 @@ def find_seams(image, k, axis=1, efunc=energy_function, cfunc=compute_cost):
         seams[np.arange(H), indices[np.arange(H), seam]] = i + 1
 
         # We remove the indices used by the seam, so that `indices` keep the same shape as `image`
-        indices = remove_seam(indices, seam)
+        indices = rfunc(indices, seam)
 
     if axis == 0:
         seams = np.transpose(seams, (1, 0))
