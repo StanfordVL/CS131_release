@@ -1,6 +1,6 @@
 Jinja2==2.9.6
 MarkupSafe==1.0
-Pillow==6.1.0
+Pillow==6.2.0
 PyWavelets==0.5.2
 Pygments==2.2.0
 appnope==0.1.0
