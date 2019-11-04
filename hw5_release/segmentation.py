@@ -41,7 +41,7 @@ def kmeans(features, k, num_iters=100):
     # Randomly initalize cluster centers
     idxs = np.random.choice(N, size=k, replace=False)
     centers = features[idxs]
-    assignments = np.zeros(N)
+    assignments = np.zeros(N, dtype=np.uint32)
 
     for n in range(num_iters):
         ### YOUR CODE HERE
@@ -77,7 +77,7 @@ def kmeans_fast(features, k, num_iters=100):
     # Randomly initalize cluster centers
     idxs = np.random.choice(N, size=k, replace=False)
     centers = features[idxs]
-    assignments = np.zeros(N)
+    assignments = np.zeros(N, dtype=np.uint32)
 
     for n in range(num_iters):
         ### YOUR CODE HERE
@@ -127,7 +127,7 @@ def hierarchical_clustering(features, k):
     assert N >= k, 'Number of clusters cannot be greater than number of points'
 
     # Assign each point to its own cluster
-    assignments = np.arange(N)
+    assignments = np.arange(N, dtype=np.uint32)
     centers = np.copy(features)
     n_clusters = N
 
