@@ -154,8 +154,8 @@ def compute_displacement(part_centers, face_shape):
             of one part in each image.
         face_shape: (h,w) that indicates the shape of a face.
     Returns:
-        mu: (1,2) vector.
-        sigma: (1,2) vector.
+        mu: (2,) vector.
+        sigma: (2,) vector.
 
     """
     d = np.zeros((part_centers.shape[0], 2))
