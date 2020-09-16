@@ -32,4 +32,4 @@ source .env/bin/activate
 ```
 jupyter notebook
 ```
-Now go to your web browser (ex, Google Chrome, Safari, Firefox) and go the this url: `localhost:8888`. Click on `hw0.ipynb` to start working on the assignment.
+Now go to your web browser (ex, Google Chrome, Safari, Firefox) and go the this url: `localhost:8888`. Click on the `hw0_release` folder then `hw0.ipynb` to start working on the assignment.
