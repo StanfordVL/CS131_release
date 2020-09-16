@@ -10,9 +10,9 @@ If you have not yet cloned (copied this assignment) into your local machine, fol
 ```
 git clone https://github.com/StanfordVL/CS131_release.git
 ```
-3. Navigate into the homework 0 directory:
+3. Navigate into the fall_2020 directory:
 ```
-cd cs131/hw0
+cd CS131_release/fall_2020
 ```
 4. Setup a virtual environment that will install all your dependencies.
 ```
