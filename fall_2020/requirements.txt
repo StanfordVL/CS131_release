@@ -21,7 +21,7 @@ jupyter==1.0.0
 jupyter-client==6.1.7
 jupyter-console==6.2.0
 jupyter-core==4.6.3
-lazy-object-proxy==1.5.1
+lazy-object-proxy
 matplotlib==3.3.2
 mccabe==0.6.1
 mistune==0.8.4
