@@ -91,7 +91,7 @@ def conv_fast(image, kernel):
     return out
 
 def cross_correlation(f, g):
-    """ Cross-correlation of f and g.
+    """ Cross-correlation of image f and template g.
 
     Hint: use the conv_fast function defined above.
 
@@ -111,7 +111,7 @@ def cross_correlation(f, g):
     return out
 
 def zero_mean_cross_correlation(f, g):
-    """ Zero-mean cross-correlation of f and g.
+    """ Zero-mean cross-correlation of image f and template g.
 
     Subtract the mean of g from g so that its mean becomes zero.
 
@@ -133,7 +133,7 @@ def zero_mean_cross_correlation(f, g):
     return out
 
 def normalized_cross_correlation(f, g):
-    """ Normalized cross-correlation of f and g.
+    """ Normalized cross-correlation of image f and template g.
 
     Normalize the subimage of f and the template g at each step
     before computing the weighted sum of the two.
