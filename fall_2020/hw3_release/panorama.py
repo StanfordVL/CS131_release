@@ -27,7 +27,12 @@ def harris_corners(img, window_size=3, k=0.04):
         which is already imported above. If you use convolve(), remember to
         specify zero-padding to match our equations, for example:
 
-        out_image = convolve(in_image, kernel, mode='constant', cval=0)
+            out_image = convolve(in_image, kernel, mode='constant', cval=0)
+
+        You can also use for nested loops compute M and the subsequent Harris
+        corner response for each output pixel, intead of using convolve().
+        Your implementation of conv_fast or conv_nested in HW1 may be a
+        useful reference!
 
     Args:
         img: Grayscale image of shape (H, W)
@@ -365,3 +370,5 @@ def stitch_multiple_images(imgs, desc_func=simple_descriptor, patch_size=5):
     ### END YOUR CODE
 
     return panorama
+
+
