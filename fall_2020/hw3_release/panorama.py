@@ -24,7 +24,15 @@ def harris_corners(img, window_size=3, k=0.04):
 
     Hint:
         You may use the function scipy.ndimage.filters.convolve,
-        which is already imported above.
+        which is already imported above. If you use convolve(), remember to
+        specify zero-padding to match our equations, for example:
+
+            out_image = convolve(in_image, kernel, mode='constant', cval=0)
+
+        You can also use for nested loops compute M and the subsequent Harris
+        corner response for each output pixel, intead of using convolve().
+        Your implementation of conv_fast or conv_nested in HW1 may be a
+        useful reference!
 
     Args:
         img: Grayscale image of shape (H, W)
@@ -40,6 +48,7 @@ def harris_corners(img, window_size=3, k=0.04):
 
     response = np.zeros((H, W))
 
+    # 1. Compute x and y derivatives (I_x, I_y) of an image
     dx = filters.sobel_v(img)
     dy = filters.sobel_h(img)
 
@@ -207,7 +216,6 @@ def ransac(keypoints1, keypoints2, matches, n_iters=200, threshold=20):
     matches = matches.copy()
 
     N = matches.shape[0]
-    print(N)
     n_samples = int(N * 0.2)
 
     matched1 = pad(keypoints1[matches[:,0]])
@@ -218,13 +226,20 @@ def ransac(keypoints1, keypoints2, matches, n_iters=200, threshold=20):
 
     # RANSAC iteration start
     
-    # Note: while there're many ways to do random sampling, please use `np.random.shuffle()`
-    # followed by slicing out the first `n_samples` matches here in order to align with the auto-grader.
-    
+    # Note: while there're many ways to do random sampling, please use
+    # `np.random.shuffle()` followed by slicing out the first `n_samples`
+    # matches here in order to align with the auto-grader.
+    # Sample with this code:
+    '''
+        np.random.shuffle(matches)
+        samples = matches[:n_samples]
+        sample1 = pad(keypoints1[samples[:,0]])
+        sample2 = pad(keypoints2[samples[:,1]])
+    '''
+
     ### YOUR CODE HERE
     pass
     ### END YOUR CODE
-    print(H)
     return H, orig_matches[max_inliers]
 
 
@@ -355,3 +370,5 @@ def stitch_multiple_images(imgs, desc_func=simple_descriptor, patch_size=5):
     ### END YOUR CODE
 
     return panorama
+
+
