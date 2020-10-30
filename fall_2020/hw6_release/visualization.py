@@ -22,22 +22,26 @@ def plot_part1(avg_face, face_hog):
 
 def plot_part2(image, r, c, response_map_resized, response_map, winW, winH):
     """plot window with highest hog score and heatmap."""
-    fig, ax = plt.subplots(1)
-    ax.imshow(image)
+    fig, (ax1, ax2, ax3) = plt.subplots(3, figsize=(10,15))
+
+    im = ax1.imshow(image)
     rect = patches.Rectangle((c - winW // 2, r - winH // 2),
                              winW,
                              winH,
                              linewidth=1,
                              edgecolor='r',
                              facecolor='none')
-    ax.add_patch(rect)
-    plt.show()
+    ax1.add_patch(rect)
+    fig.colorbar(im, ax=ax1)
 
-    plt.imshow(response_map_resized, cmap='viridis', interpolation='nearest')
-    plt.title('Resized Sliding Window Response Map')
-    plt.show()
-    plt.imshow(response_map, cmap='viridis', interpolation='nearest')
-    plt.title('Original Sliding Window Response Map')
+    ax2.set_title('Sliding Window Response Map')
+    im = ax2.imshow(response_map_resized, cmap='viridis', interpolation='nearest')
+    fig.colorbar(im, ax=ax2)
+
+    ax3.set_title('Unresized Sliding Window Response Map')
+    im = ax3.imshow(response_map, cmap='viridis', interpolation='nearest')
+    fig.colorbar(im, ax=ax3)
+    plt.tight_layout()
     plt.show()
 
 
@@ -62,25 +66,27 @@ def plot_part3_1(images):
 
     plt.imshow(composite_image)
     plt.axis('off')
-    plt.title('image pyramid')
+    plt.title('Image Pyramid')
     plt.show()
 
 
 def plot_part3_2(image, max_scale, winW, winH, maxc, maxr, max_response_map):
     """plot window with highest hog score and heatmap."""
-    fig, ax = plt.subplots(1)
-    ax.imshow(rescale(image, max_scale))
+    fig, (ax1, ax2) = plt.subplots(2, figsize=(10,10))
+    im = ax1.imshow(rescale(image, max_scale))
     rect = patches.Rectangle((maxc - winW // 2, maxr - winH // 2),
                              winW,
                              winH,
                              linewidth=1,
                              edgecolor='r',
                              facecolor='none')
-    ax.add_patch(rect)
-    plt.show()
+    ax1.add_patch(rect)
+    fig.colorbar(im, ax=ax1)
 
-    plt.imshow(max_response_map, cmap='viridis', interpolation='nearest')
-    plt.axis('off')
+    ax2.set_title('Pyramid Score Response Map')
+    im = ax2.imshow(max_response_map, cmap='viridis', interpolation='nearest')
+    fig.colorbar(im, ax=ax2)
+    plt.tight_layout()
     plt.show()
 
 
@@ -100,61 +106,66 @@ def plot_part4(avg, hog, part_name):
 
 def plot_part5_1(response_map):
     """plot heatmaps."""
-    plt.imshow(response_map, cmap='viridis', interpolation='nearest')
-    plt.axis('off')
+    fig, ax = plt.subplots(1, figsize=(10,5))
+    im = ax.imshow(response_map, cmap='viridis', interpolation='nearest')
+    fig.colorbar(im, ax=ax)
     plt.show()
 
 
 def plot_part5_2_face(face_heatmap_shifted):
     """plot heatmaps."""
-    plt.imshow(face_heatmap_shifted, cmap='viridis', interpolation='nearest')
-    plt.axis('off')
+    fig, ax = plt.subplots(1, figsize=(10,5))
+    im = ax.imshow(face_heatmap_shifted, cmap='viridis', interpolation='nearest')
+    fig.colorbar(im, ax=ax)
     plt.show()
 
 
 def plot_part5_2_parts(lefteye_heatmap_shifted, righteye_heatmap_shifted,
                  nose_heatmap_shifted, mouth_heatmap_shifted):
     """plot heatmaps."""
-    f, axarr = plt.subplots(2, 2)
-    axarr[0, 0].axis('off')
-    axarr[0, 1].axis('off')
-    axarr[1, 0].axis('off')
-    axarr[1, 1].axis('off')
-    axarr[0, 0].imshow(
+    f, axarr = plt.subplots(2, 2, figsize=(14,7))
+
+    im = axarr[0, 0].imshow(
         lefteye_heatmap_shifted, cmap='viridis', interpolation='nearest')
-    axarr[0, 1].imshow(
+    f.colorbar(im, ax=axarr[0,0])
+
+    im = axarr[0, 1].imshow(
         righteye_heatmap_shifted, cmap='viridis', interpolation='nearest')
-    axarr[1, 0].imshow(
+    f.colorbar(im, ax=axarr[0,1])
+
+    im = axarr[1, 0].imshow(
         nose_heatmap_shifted, cmap='viridis', interpolation='nearest')
-    axarr[1, 1].imshow(
+    f.colorbar(im, ax=axarr[1,0])
+
+    im = axarr[1, 1].imshow(
         mouth_heatmap_shifted, cmap='viridis', interpolation='nearest')
+    f.colorbar(im, ax=axarr[1,1])
+
     plt.show()
 
 
 def plot_part6_1(winH, winW, heatmap, image, i, j):
     """plot heatmaps and optimal window."""
-    fig, ax = plt.subplots(1)
+    fig, (ax1, ax2) = plt.subplots(2, figsize=(10,10))
+    im = ax1.imshow(resize(image, heatmap.shape))
     rect = patches.Rectangle((j - winW // 2, i - winH // 2),
                              winW,
                              winH,
                              linewidth=1,
                              edgecolor='r',
                              facecolor='none')
-    ax.add_patch(rect)
+    ax1.add_patch(rect)
+    fig.colorbar(im, ax=ax1)
 
-    plt.imshow(heatmap, cmap='viridis', interpolation='nearest')
-    plt.axis('off')
-    plt.show()
-
-    fig, ax = plt.subplots(1)
+    ax2.set_title('Gaussian Filter Heatmap')
+    im = ax2.imshow(heatmap, cmap='viridis', interpolation='nearest')
     rect = patches.Rectangle((j - winW // 2, i - winH // 2),
                              winW,
                              winH,
                              linewidth=1,
                              edgecolor='r',
                              facecolor='none')
-    ax.add_patch(rect)
-
-    plt.imshow(resize(image, heatmap.shape))
-    plt.axis('off')
+    ax2.add_patch(rect)
+    fig.colorbar(im, ax=ax2)
+    plt.tight_layout()
     plt.show()

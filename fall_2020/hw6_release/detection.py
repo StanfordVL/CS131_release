@@ -167,6 +167,10 @@ def compute_displacement(part_centers, face_shape):
     such that d[i,0] is the face's center-x coordinate minus the ith part's x
     coordinate, and similarly for y coordinates.
 
+    Hint: you should leave mu as floats instead of rounding to integers,
+    because our next step of applying the shift in shift_heatmap will
+    interpolate the shift, which is valid for float shifts.
+
     Args:
         part_centers: np array of (n,2) containing centers
             of one part in each image.
