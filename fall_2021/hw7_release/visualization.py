@@ -104,7 +104,7 @@ def plot_part4(avg, hog, part_name):
     plt.show()
 
 
-def plot_part4_1(response_map):
+def plot_part5_1(response_map):
     """plot heatmaps."""
     fig, ax = plt.subplots(1, figsize=(10,5))
     im = ax.imshow(response_map, cmap='viridis', interpolation='nearest')
@@ -112,7 +112,7 @@ def plot_part4_1(response_map):
     plt.show()
 
 
-def plot_part4_2_face(face_heatmap_shifted):
+def plot_part5_2_face(face_heatmap_shifted):
     """plot heatmaps."""
     fig, ax = plt.subplots(1, figsize=(10,5))
     im = ax.imshow(face_heatmap_shifted, cmap='viridis', interpolation='nearest')
@@ -120,7 +120,7 @@ def plot_part4_2_face(face_heatmap_shifted):
     plt.show()
 
 
-def plot_part4_2_parts(lefteye_heatmap_shifted, righteye_heatmap_shifted,
+def plot_part5_2_parts(lefteye_heatmap_shifted, righteye_heatmap_shifted,
                  nose_heatmap_shifted, mouth_heatmap_shifted):
     """plot heatmaps."""
     f, axarr = plt.subplots(2, 2, figsize=(14,7))
@@ -144,7 +144,7 @@ def plot_part4_2_parts(lefteye_heatmap_shifted, righteye_heatmap_shifted,
     plt.show()
 
 
-def plot_part5_1(winH, winW, heatmap, image, i, j):
+def plot_part6_1(winH, winW, heatmap, image, i, j):
     """plot heatmaps and optimal window."""
     fig, (ax1, ax2) = plt.subplots(2, figsize=(10,10))
     im = ax1.imshow(resize(image, heatmap.shape))
