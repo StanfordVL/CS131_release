@@ -1,6 +1,6 @@
 # Homework 0
 
-Follow the instructions in `hw0.ipynb` to complete the assignment. Follow the instructions in [this webpage](http://vision.stanford.edu/teaching/cs131_fall2122/assignments.html) to learn how to complete the assignments and how to turn it in.
+Follow the instructions in `hw0.ipynb` to complete the assignment. Follow the instructions in [this webpage](http://vision.stanford.edu/teaching/cs131_fall2223/assignments.html) to learn how to complete the assignments and how to turn it in.
 
 
 If you have not yet cloned (copied this assignment) into your local machine, follow the following steps:
