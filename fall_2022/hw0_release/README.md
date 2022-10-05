@@ -10,9 +10,9 @@ If you have not yet cloned (copied this assignment) into your local machine, fol
 ```
 git clone https://github.com/StanfordVL/CS131_release.git
 ```
-3. Navigate into the homework 0 directory:
+3. Navigate into the fall_2022 homework directory:
 ```
-cd cs131/hw0
+cd CS131_release/fall_2022
 ```
 4. Setup a virtual environment that will install all your dependencies.
 ```
@@ -24,10 +24,11 @@ If you find that virtualenv is not installed in your local machine, install it b
 ```
 sudo pip install virtualenv
 ```
-5. Remember that everytime you take a break and then decide to go back to working on this assignment, you will need to activate your virtualenv to use the dependencies. You can activate your virtualenv by calling:
+5. Remember that everytime you take a break and then decide to go back to working on this assignment, you will need to activate your virtualenv to use the dependencies. You can activate your virtualenv by calling the following command under the folder that you created the virtual environment (if you followed the instruction correctly, it should be under CS131_release/fall_2022):
 ```
 source .env/bin/activate
 ```
+Notice that although you should activate the virtual environment under the folder you created the environment, after you activated it, you can navigate to any folders whithin the environment.
 6. Now you are ready to start `hw0.ipynb` and start working on your assignment. Start the notebook by calling:
 ```
 jupyter notebook

@@ -1,5 +1,5 @@
 Jinja2==2.11.2
-MarkupSafe
+MarkupSafe==2.0.1
 Pillow
 PyWavelets
 Pygments==2.7.0
