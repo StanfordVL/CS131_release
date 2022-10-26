@@ -3,7 +3,7 @@ CS131 - Computer Vision: Foundations and Applications
 Assignment 4
 Author: Donsuk Lee (donlee90@stanford.edu)
 Date created: 07/2017
-Last modified: 10/24/2022
+Last modified: 10/25/2022
 Python Version: 3.5+
 """
 
