@@ -79,7 +79,10 @@ def simple_descriptor(patch):
     """
     feature = []
     ### YOUR CODE HERE
-    pass
+    if patch.std() == 0:
+        feature = (patch - patch.mean()).flatten()
+    else:
+        feature = ((patch - patch.mean()) / patch.std()).flatten()
     ### END YOUR CODE
     return feature
 
