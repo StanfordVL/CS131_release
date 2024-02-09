@@ -1,3 +1,7 @@
 .DS_STORE
 *.ipynb_checkpoints*
 *__pycache__*
+winter_2024/project2_release/option_C/option_c_sol.ipynb
+winter_2024/project2_release/option_C/motion_sol.py
+winter_2024/project2_release/option_D/option_d_sol.ipynb
+winter_2024/project2_release/option_D/segmentation_sol.py
