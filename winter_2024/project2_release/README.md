@@ -4,6 +4,8 @@ CS131, Winter 2024
 
 This project asks you to choose a concept from the selection below and expand on it creatively. You should choose a topic that seems most interesting to you. (This is a great starting point as exploration for a final project as well!) 
 
+Please see [Project 2 Guidelines](https://docs.google.com/document/d/1_yLzSePaVH2OrQgzZsu-1sZ4ez1Da9_tFzZFM3LCarQ) for the most updated project guidelines. 
+
 
 ## Part 1 (50%): 
 
@@ -13,9 +15,9 @@ Read through the notebooks to get a sense of which one might interest you the mo
 
 - Option B: Edge Detection and Hough Transform (Lecture 8-9) 
 
-- Option C: Optical Flow and Object Tracking (Lecture 10-11)
+- Option C: Optical Flow and Object Tracking (Lecture 13)
 
-- Option D: K-means Clustering and Image Segmentation (Lectures 12-13)
+- Option D: K-means Clustering and Image Segmentation (Lectures 10-12)
 
 
 ## Part 2 (50%): 
