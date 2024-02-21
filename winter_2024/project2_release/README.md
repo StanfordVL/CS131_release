@@ -44,7 +44,8 @@ While this section is open-ended in the topic that you choose to explore, we ask
 
     - Option B - 
 
-      - Edge/lane detection using your own images - analy
+      - Edge/lane detection using your own images - analyze the performance of edge detection algorithms on various different environments - when does edge detection do better? Worse? How can these be improved? 
+
 
       - Enhancing the edge detection algorithm
 
