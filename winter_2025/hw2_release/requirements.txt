@@ -1,5 +1,4 @@
 numpy
-Time
 scikit-image
 scipy
 matplotlib
