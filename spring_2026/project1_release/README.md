@@ -11,11 +11,11 @@ Please see [Project 1 Guidelines](https://docs.google.com/document/d/1nJSd8TDlYs
 
 Read through the notebooks to get a sense of which one might interest you the most. Select **one** of the following topics to complete the notebook:
 
-- Option A: Filter and Object Detection (Lecture )
+- Option A: Filter and Object Detection (Lectures 2-3)
 
-- Option B: Edge Detection and Hough Transform (Lecture ) 
+- Option B: Edge Detection and Hough Transform (Lecture 3) 
 
-- Option C:  Local Features and Panorama Stitching (Lecture )
+- Option C:  Local Features and Panorama Stitching (Lecture 4)
 
 
 ## Part 2 (50%): 
