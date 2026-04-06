@@ -1,4 +1,4 @@
-# Project 2 Guidelines 
+# Project 1 Guidelines 
 
 CS131, Spring 2026
 
