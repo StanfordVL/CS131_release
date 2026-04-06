@@ -4,18 +4,18 @@ CS131, Spring 2026
 
 This project asks you to choose a concept from the selection below and expand on it creatively. You should choose a topic that seems most interesting to you. (This is a great starting point as exploration for a final project as well!) 
 
-Please see [Project 2 Guidelines](https://docs.google.com/document/d/1_yLzSePaVH2OrQgzZsu-1sZ4ez1Da9_tFzZFM3LCarQ) for the most updated project guidelines. 
+Please see [Project 1 Guidelines](https://docs.google.com/document/d/1nJSd8TDlYso3aOhG9sLK2AIMHIrlvKPiIfKAZwGP0Bs/edit?tab=t.0#heading=h.wnjpcldre32f) for the most updated project guidelines. 
 
 
 ## Part 1 (50%): 
 
 Read through the notebooks to get a sense of which one might interest you the most. Select **one** of the following topics to complete the notebook:
 
-- Option A: Filter and Object Detection (Lecture 7)
+- Option A: Filter and Object Detection (Lecture )
 
-- Option B: Edge Detection and Hough Transform (Lecture 8-9) 
+- Option B: Edge Detection and Hough Transform (Lecture ) 
 
-- Option C: Project 1 release material
+- Option C:  Local Features and Panorama Stitching (Lecture )
 
 
 ## Part 2 (50%): 
@@ -49,9 +49,10 @@ While this section is open-ended in the topic that you choose to explore, we ask
 
     - Option C- 
 
-      - Extend the Project 1 notebook or supporting code with additional experiments
+      - Feature detection, image alignment, and panorama generation
+     
+      - Analyze when the panorama pipeline succeeds or fails, and explore ways to make it more robust to viewpoint changes, lighting differences, blur, or low-texture scenes.
 
-      - Analyze performance, limitations, or interesting failure cases from the Project 1 tasks
 
   - Consult a TA if you’re unsure or confused on what to do!
 
