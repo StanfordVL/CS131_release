@@ -1,19 +1,19 @@
-# Project 2 Guidelines 
+# Project 1 Guidelines 
 
 CS131, Spring 2026
 
 This project asks you to choose a concept from the selection below and expand on it creatively. You should choose a topic that seems most interesting to you. (This is a great starting point as exploration for a final project as well!) 
 
-Please see [Project 2 Guidelines](https://docs.google.com/document/d/1_yLzSePaVH2OrQgzZsu-1sZ4ez1Da9_tFzZFM3LCarQ) for the most updated project guidelines. 
+Please see [Project 1 Guidelines](https://docs.google.com/document/d/1nJSd8TDlYso3aOhG9sLK2AIMHIrlvKPiIfKAZwGP0Bs/edit?tab=t.0#heading=h.wnjpcldre32f) for the most updated project guidelines. 
 
 
 ## Part 1 (50%): 
 
 Read through the notebooks to get a sense of which one might interest you the most. Select **one** of the following topics to complete the notebook:
 
-- Option A: Filter and Object Detection (Lecture 7)
+- Option A: Filter and Object Detection (Lectures 2-3)
 
-- Option B: Edge Detection and Hough Transform (Lecture 8-9) 
+- Option B: Edge Detection and Hough Transform (Lecture 3) 
 
 - Option C: Harris corners, keypoint matching, and SIFT
 
