@@ -7,7 +7,7 @@ This project asks you to choose a concept from the selection below and expand on
 Please see [Project 1 Guidelines](https://docs.google.com/document/d/1nJSd8TDlYso3aOhG9sLK2AIMHIrlvKPiIfKAZwGP0Bs/edit?tab=t.0#heading=h.wnjpcldre32f) for the most updated project guidelines. 
 
 
-## Part 1 (50%): 
+## Main Notebook (50%): 
 
 Read through the notebooks to get a sense of which one might interest you the most. Select **one** of the following topics to complete the notebook:
 
@@ -18,9 +18,9 @@ Read through the notebooks to get a sense of which one might interest you the mo
 - Option C: Harris corners, keypoint matching, and SIFT
 
 
-## Part 2 (50%): 
+## Exploration Notebook (50%): 
 
-The next part will be your project exploration and implementation, expanding on the concepts from a notebook of choice. 
+The exploration notebook is a separate later submission that expands on the concepts from a notebook of choice. 
 
 While this section is open-ended in the topic that you choose to explore, we ask that you complete the following: 
 
@@ -64,7 +64,7 @@ While this section is open-ended in the topic that you choose to explore, we ask
 
 _\[Will be updated once autograder is released]_
 
-Please find the relevant gradescope assignment to the one that you did and submit that one only. You should submit 2 total gradescope assignments: 
+Please find the relevant Gradescope assignment for the option that you completed and submit that option only. You should submit 2 total Gradescope assignments: 
 
 - Option \[X] Notebook Code 
 
